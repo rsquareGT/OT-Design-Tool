@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floor Plan Designer</title>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <!-- Sidebar for buttons -->
+        <div class="col-md-2 p-3 bg-light" id="sidebar">
+          <h5>Tools</h5>
+          <button id="draWallBtn" class="btn btn-primary w-100 mb-2">
+            Draw Wall
+          </button>
+          <button id="undoBtn" class="btn btn-primary w-100 mb-2">Undo</button>
+          <button id="redoBtn" class="btn btn-primary w-100 mb-2">Redo</button>
+          <button id="zoomInBtn" class="btn btn-primary w-100 mb-2">
+            Zoom In
+          </button>
+          <button id="zoomOutBtn" class="btn btn-primary w-100 mb-2">
+            Zoom Out
+          </button>
+          <button id="resetZoomBtn" class="btn btn-primary w-100 mb-2">
+            Reset Zoom
+          </button>
+          <button id="deleteBtn" class="btn btn-danger w-100">
+            Delete Selected
+          </button>
+
+          <div id="propertiesPanel" class="bg-light p-3 border mt-3 d-none">
+            <h5>Wall Dimensions</h5>
+            <div class="form-group">
+              <label for="length-input">Length (cm):</label>
+              <input
+                type="number"
+                id="length-input"
+                class="form-control"
+                step="0.01"
+              />
+            </div>
+            <div class="form-group">
+              <label for="rotation-input">Rotation (°):</label>
+              <input
+                type="number"
+                class="form-control"
+                id="rotation-input"
+                step="1"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Canvas Area -->
+        <div class="col-md-10 p-0" id="canvas-container">
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
